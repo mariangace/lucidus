@@ -19,7 +19,7 @@ public class animcontroller : MonoBehaviour {
 		if( Input.GetKey(KeyCode.RightArrow)){
 			
 			for (int k = 1; k<=20 ; k++){
-				texs[k-1] = Resources.Load("Corriendo"+k.ToString("0000")) as Texture;	
+				texs[k-1] = Resources.Load("Caminando"+k.ToString("0000")) as Texture;	
 			}
 			
 			this.renderer.material.mainTexture = texs[index];
@@ -30,7 +30,7 @@ public class animcontroller : MonoBehaviour {
 		if( Input.GetKey(KeyCode.LeftArrow)){
 			
 			for (int k = 1; k<=20 ; k++){
-				texs[k-1] = Resources.Load("run"+k.ToString("0000")) as Texture;	
+				texs[k-1] = Resources.Load("Caminandoizq"+k.ToString("0000")) as Texture;	
 			}
 			
 			this.renderer.material.mainTexture = texs[index];
