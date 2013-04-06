@@ -4,7 +4,7 @@ using System.Collections;
 public class PausaInterfaz : MonoBehaviour {
 
 	public GUISkin customSkin;
-	public Rect winRect = new Rect(10,10,300,300);
+	public Rect winRect = new Rect(10,10,Screen.width,300);
 	//private string nom="WriteYourNameHere";
 	
 	// Update is called once per frame

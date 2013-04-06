@@ -6,7 +6,7 @@ public class Interfaz : MonoBehaviour {
 	public GUIStyle estiloBoton;
 	public GUIStyle estiloBoton2;
 	public GUISkin customSkin;
-	public Rect winRect = new Rect(10,10,300,300);
+	public Rect winRect = new Rect(10,10,Screen.width,Screen.height);
 	//private string nom="WriteYourNameHere";
 	
 	// Update is called once per frame
@@ -15,6 +15,7 @@ public class Interfaz : MonoBehaviour {
 	}
 	
 	void miVentana(int winID){
+		
 		GUI.Label(new Rect(50,80,200,50), "MAIN MENU");
 		//nom = GUI.TextField(new Rect(80,120,150,30), nom);
 		if (GUI.Button(new Rect(100,150,93,38), "Jugar")){
