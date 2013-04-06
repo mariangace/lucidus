@@ -7,11 +7,11 @@ public class CuartoControl : MonoBehaviour {
 	public GameObject jugador ;
 	
 	// Pivate elements
-	public int orientacion = 0; // 0 => suelo, 1 => derecha, 2 => techo, 3 => izquierda
+	int orientacion = 0; // 0 => suelo, 1 => derecha, 2 => techo, 3 => izquierda
 	float targetRotacion = 0;
 	float rotacion = 0;
 	float delta = 0;
-	public bool freeze = false;
+	bool freeze = false;
 	
 	// Use this for initialization
 	void Start () {
@@ -34,7 +34,7 @@ public class CuartoControl : MonoBehaviour {
 		else
 		{
 			delta = 0;
-			//jugador.GetComponent<Control>().enable = true;
+			jugador.GetComponent<PersonajeControl>().setEnable(true);
 			freeze = false;
 		}
 		
@@ -83,7 +83,7 @@ public class CuartoControl : MonoBehaviour {
 	
 	void rotar(int i) {  // 0 => 180, 1 => izquierda, 2 => derecha
 		
-		//jugador.GetComponent<Control>().enable = false;
+		jugador.GetComponent<PersonajeControl>().setEnable(false);
 		
 		if(i == 0) { delta = -2.0f; targetRotacion = rotacion-180; }
 		if(i == 1) { delta = -1.0f; targetRotacion = rotacion-90;}
